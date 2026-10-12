@@ -2,11 +2,10 @@
 
 ## SWOS Kernel is a commercial kernel written in Rust.
 
-# /\_/\
+/\_/\
+( O.O )
 
-# ( O.O )
-
-# > ^ <
+> ^ <
 
 ## Detail
 
