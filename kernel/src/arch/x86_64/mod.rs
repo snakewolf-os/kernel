@@ -1,6 +1,7 @@
 pub mod cpu;
+pub mod interrupt;
 
-/// Initialize x86_64 architecture support.
 pub fn init() {
     cpu::init();
+    interrupt::init();
 }

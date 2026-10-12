@@ -1,4 +1,5 @@
 pub mod cpu;
+pub mod interrupt;
 
 #[cfg(target_arch = "x86_64")]
 pub mod x86_64;
@@ -12,9 +13,9 @@ pub mod riscv64;
 #[cfg(target_arch = "loongarch64")]
 pub mod loongarch64;
 
-/// Initialize architecture-specific kernel support.
 pub fn init() {
     cpu::init();
+    interrupt::init();
 
     #[cfg(target_arch = "x86_64")]
     x86_64::init();

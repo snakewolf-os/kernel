@@ -1,6 +1,7 @@
 pub mod cpu;
+pub mod interrupt;
 
-/// Initialize AArch64 architecture support.
 pub fn init() {
     cpu::init();
+    interrupt::init();
 }

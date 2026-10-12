@@ -7,6 +7,22 @@ mod print;
 
 use core::panic::PanicInfo;
 
+/// SWOS Kernel version.
+const KERNEL_VERSION: &str = env!("CARGO_PKG_VERSION");
+
+/// Kernel architecture.
+#[cfg(target_arch = "x86_64")]
+const KERNEL_ARCH: &str = "x86_64";
+
+#[cfg(target_arch = "aarch64")]
+const KERNEL_ARCH: &str = "AArch64";
+
+#[cfg(target_arch = "riscv64")]
+const KERNEL_ARCH: &str = "RISC-V 64";
+
+#[cfg(target_arch = "loongarch64")]
+const KERNEL_ARCH: &str = "LoongArch64";
+
 /// Kernel entry point.
 #[unsafe(no_mangle)]
 unsafe extern "C" fn kmain() -> ! {
@@ -32,7 +48,7 @@ unsafe extern "C" fn kmain() -> ! {
         }
 
         println!(" /\\_/\\  SWOS Kernel");
-        println!("( o.o ) Version: Beta 0.0.2");
+        println!("( o.o ) Version: {} ({})", KERNEL_VERSION, KERNEL_ARCH);
         println!(" > ^ <  Made by SnakeWolf in Japan");
         println!();
 
@@ -46,6 +62,7 @@ unsafe extern "C" fn kmain() -> ! {
         arch::init();
 
         println!("Architecture initialized.");
+        println!("Interrupt abstraction initialized.");
         println!();
 
         println!("Boot abstraction initialized.");
