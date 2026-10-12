@@ -82,9 +82,9 @@ unsafe extern "C" fn kmain() -> ! {
                 );
             }
 
-            println!("=== SnakeWolf OS Booted Successfully ===");
-            println!("OS: SnakeWolf OS (x86_64)");
-            println!("Status: READY");
+            println!(" /\\_/\\  SWOS Kernel");
+            println!("( o.o ) Version: Beta 0.0.2");
+            println!(" > ^ <  Made by SnakeWolf in Japan");
             println!();
 
             println!("Print subsystem initialized.");
@@ -95,9 +95,9 @@ unsafe extern "C" fn kmain() -> ! {
             println!("Scrolling test:");
             println!("----------------");
 
-            for i in 0..100 {
-                println!("Line {:03}", i);
-            }
+            // for i in 0..100 {
+            //     println!("Line {:03}", i);
+            // }
         }
     }
 

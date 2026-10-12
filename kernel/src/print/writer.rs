@@ -20,6 +20,8 @@ pub struct FramebufferWriter {
     background: u32,
 }
 
+unsafe impl Send for FramebufferWriter {}
+
 impl FramebufferWriter {
     /// FramebufferWriterを生成
     ///
