@@ -57,9 +57,7 @@ make run
 ## Disclaimer & Project Status
 
 > [!note]
-> `/\_/\`
-> `( !.! )` Pre-release Version
-> `> ^ <`
+> Pre-release Version
 
 > [!Warning]
 > This project is currently in **Beta**. APIs and internal architectures may change without prior notice. Use caution when testing in target environments.
